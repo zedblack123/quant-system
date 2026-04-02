@@ -58,3 +58,13 @@
 - **选股、策略、推理、代码**：优先使用 DeepSeek
 - **日常对话、信息推送**：使用 MiniMax
 - **配置位置**：`/root/.openclaw/workspace/TOOLS.md`
+
+## 贾维斯多智能体系统
+- **位置**：`/root/.openclaw/workspace/jarvis-trading-system/src/multi_agent.py`
+- **架构**：5个Agent（基本面、技术、情绪、风控、交易决策）
+- **模型分工**：DeepSeek主分析，MiniMax辅助情绪
+
+## TradingAgents 集成
+- **位置**：`/root/.openclaw/workspace/trading_agents_external/`
+- **整合模块**：`jarvis-trading-system/src/integration/trading_agents_integration.py`
+- **状态**：已安装，待配置API Key后使用
