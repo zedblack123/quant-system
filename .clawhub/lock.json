@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1775029568301
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1775029981727
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1775030704348
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1775030882683
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1775032081811
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1775033461807
+    },
+    "akshare-stock": {
+      "version": "1.0.1",
+      "installedAt": 1775033881907
+    },
+    "a-stock-market": {
+      "version": "1.0.0",
+      "installedAt": 1775034061601
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1775034661845
+    },
+    "proactive-agent-lite": {
+      "version": "1.0.0",
+      "installedAt": 1775034782309
+    },
+    "cron": {
+      "version": "1.0.0",
+      "installedAt": 1775092622500
+    },
+    "shell": {
+      "version": "1.0.0",
+      "installedAt": 1775094182041
+    }
+  }
+}

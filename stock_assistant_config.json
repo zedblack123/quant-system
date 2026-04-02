@@ -1,0 +1,151 @@
+{
+  "system_name": "A股打板龙头股量化辅助系统",
+  "version": "1.0.0",
+  "created_at": "2026-03-31",
+  "user": "人山先生",
+  
+  "schedule": {
+    "morning_report": "08:00",
+    "evening_report": "22:00",
+    "market_open_check": "09:15",
+    "market_close_summary": "15:05"
+  },
+  
+  "news_sources": {
+    "domestic": [
+      "财联社",
+      "华尔街见闻",
+      "东方财富",
+      "同花顺",
+      "雪球",
+      "选股宝"
+    ],
+    "international": [
+      "Bloomberg",
+      "Reuters",
+      "CNBC",
+      "华尔街日报中文版"
+    ],
+    "social_media": [
+      "X (Twitter)",
+      "微博财经",
+      "微信公众号"
+    ],
+    "official": [
+      "证监会",
+      "上交所",
+      "深交所",
+      "央行",
+      "财政部",
+      "发改委"
+    ]
+  },
+  
+  "stock_selection": {
+    "dragon_head_criteria": {
+      "industry_rank": "top3",
+      "market_cap_range": ["10亿", "200亿"],
+      "recent_performance": {
+        "has_limit_up": true,
+        "limit_up_days": [1, 3],
+        "volume_increase": 1.5
+      },
+      "technical_indicators": {
+        "macd_golden_cross": true,
+        "kdj_overbought": false,
+        "rsi_range": [50, 80]
+      }
+    },
+    
+    "break_limit_strategy": {
+      "focus": ["首板", "二板"],
+      "min_seal_amount": 50000000,
+      "turnover_range": [0.05, 0.20],
+      "volume_ratio_min": 1.5,
+      "float_market_cap_max": 20000000000
+    },
+    
+    "sector_focus": [
+      "人工智能",
+      "新能源汽车",
+      "半导体",
+      "医药",
+      "消费电子",
+      "光伏",
+      "军工"
+    ]
+  },
+  
+  "risk_management": {
+    "position_sizing": {
+      "max_per_stock": 0.20,
+      "max_per_sector": 0.40,
+      "total_leverage": 1.0
+    },
+    
+    "stop_loss": {
+      "individual_stock": -0.08,
+      "portfolio_drawdown": -0.15
+    },
+    
+    "take_profit": {
+      "level1": 0.10,
+      "level2": 0.20,
+      "level3": 0.30
+    },
+    
+    "risk_metrics": {
+      "max_daily_loss": -0.05,
+      "var_95": -0.03,
+      "sharpe_min": 1.0
+    }
+  },
+  
+  "report_format": {
+    "morning_report": {
+      "sections": [
+        "全球隔夜市场",
+        "重要新闻速递",
+        "今日关注焦点",
+        "龙头股精选池",
+        "交易策略建议"
+      ],
+      "detail_level": "concise"
+    },
+    
+    "evening_report": {
+      "sections": [
+        "今日市场回顾",
+        "涨停板分析",
+        "资金流向追踪",
+        "明日展望",
+        "风险提示"
+      ],
+      "detail_level": "detailed"
+    }
+  },
+  
+  "notification": {
+    "channels": ["feishu"],
+    "priority_levels": {
+      "high": ["重大政策", "突发利空", "个股异动"],
+      "medium": ["行业新闻", "财报公告"],
+      "low": ["常规数据", "市场评论"]
+    },
+    "format": "markdown"
+  },
+  
+  "data_sources": {
+    "realtime": "待接入量化数据源",
+    "historical": "待接入历史数据库",
+    "financial": "待接入财务数据",
+    "sentiment": "待接入舆情数据"
+  },
+  
+  "development_roadmap": {
+    "phase1": "基础框架搭建（本周）",
+    "phase2": "策略优化回测（下周）",
+    "phase3": "实盘接口接入（下月）",
+    "phase4": "机器学习优化（未来）"
+  }
+}
