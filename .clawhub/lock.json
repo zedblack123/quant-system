@@ -48,6 +48,38 @@
     "shell": {
       "version": "1.0.0",
       "installedAt": 1775094182041
+    },
+    "ai-video-script": {
+      "version": "1.0.0",
+      "installedAt": 1775117162996
+    },
+    "feishu-messaging": {
+      "version": "0.0.3",
+      "installedAt": 1775122081841
+    },
+    "feishu-bridge": {
+      "version": "1.0.0",
+      "installedAt": 1775122321533
+    },
+    "feishu-file-sender": {
+      "version": "1.0.9",
+      "installedAt": 1775122501630
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1775124721331
+    },
+    "find-skills-skill": {
+      "version": "1.0.0",
+      "installedAt": 1775182682401
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1775182922075
+    },
+    "pua": {
+      "version": "2.9.0",
+      "installedAt": 1775211363740
     }
   }
 }

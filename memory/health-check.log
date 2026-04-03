@@ -1,0 +1,64 @@
+
+=== Feishu Health Check - 2026-04-02 18:45 CST ===
+Status: ABNORMAL - Feishu plugin DISABLED in config
+openclaw status output: plugins.entries.feishu: plugin disabled (disabled in config)
+Gateway: running (pid 795100)
+Sessions: 37 total, 0 Feishu sessions
+Feishu credentials: PRESENT (lark.secrets.json exists)
+Gateway restart via pkill: NOT APPLICABLE - plugin disabled, restart will not fix
+Action required: Human must enable Feishu plugin in openclaw.json config
+[2026-04-02 22:00 CST] Feishu Health Check
+- Feishu Channel: ON OK
+- Gateway: running (pid 849206)
+- Feishu session age: 5 hours (stale session metadata, not stuck)
+- Cron run sessions: ~20 sessions, all <50min (normal)
+- Action: No restart needed. Channel healthy.
+========================================
+飞书通道健康检查 — 2026-04-02 22:45 CST
+========================================
+Feishu 插件状态: ON OK
+Gateway 服务: 运行正常 (pid 864649)
+飞书会话总数: 11
+主会话状态: 活跃响应正常
+旧cron会话堆积: 19个 (历史遗留，已无需处理)
+测试消息: 发送成功 (om_x100b53dc5c1204a8b4bb9f5a3f02f5b)
+结论: 飞书通道正常，无需重启
+
+[2026-04-02T23:16:25+0800] Feishu Health Check
+- Channel Status: ON OK (configured)
+- Feishu Session: agent:main:feishu:direct:ou_636754d2a4956be2f5928918767a62e7
+  - Status: running (normal, session active)
+  - Last Updated: 2026-04-02 17:05:20+08:00 (age: 6h10m)
+  - Note: updatedAt == startedAt suggests session was created at that time and hasn't received new messages
+- Gateway: running via systemd (pid 864649)
+- Feishu API (get_user): OK
+- Test message sent: om_x100b53dccadd18a0b2570ba5dd35fc1 -> ou_636754d2a4956be2f5928918767a62e7
+- Conclusion: No restart needed. Channel is healthy.
+
+========================================
+飞书通道健康检查 - 2026-04-03 04:15:57
+========================================
+Feishu Channel Status: ON OK
+Gateway Service: running (pid 921569)
+发现异常: sessions.json中存在一条飞书会话(ou_636754d2a4956be2f5928918767a62e7)状态为running，但实际session文件不存在
+评估: 通道正常，这是sessions.json中的陈旧条目，不影响实际运行
+建议: 无需重启，可通过定期清理sessions.json解决
+
+
+=== 飞书通道健康检查 2026-04-03 05:00 CST ===
+状态: ✅ 正常
+- Feishu 通道: ON OK
+- Gateway: running (pid 954852)
+- 最近 Feishu 消息发送: 2026-04-02T20:48 UTC ✅
+- 飞书会话: 12个，无卡死
+- 无需重启
+{"time": "2026-04-03T05:30:00+08:00", "feishu_status": "ON OK", "gateway": "running", "sessions_total": 111, "stuck_sessions": 0, "action": "none_needed", "test_message": "success"}
+========== 飞书通道健康检查 ==========
+时间: 2026-04-03 06:45 (Asia/Shanghai)
+Feishu 频道状态: ON OK ✅
+Feishu 会话数: 1
+Feishu 会话运行时长: 约820分钟（最后活跃于 2026-04-02 09:05 UTC）
+通道测试消息: 已发送成功 (message_id: om_x100b53db55c2c0a0b32ae11756bc4f4)
+结论: 飞书通道正常，无需重启网关
+========================================
+

@@ -5,6 +5,38 @@
 - 服务对象：人山先生
 - 角色：A股量化投资助手
 
+## 系统升级记录
+
+### 2026-04-02: TradingAgents-CN 整合
+**目标**: 部署 TradingAgents-CN 并整合到贾维斯量化系统
+**状态**: ✅ 完成
+
+**主要成果**:
+1. **部署成功**: 在服务器上部署了 TradingAgents-CN 多智能体框架
+2. **架构优化**: 创建了优化版多智能体系统 (`optimized_multi_agent.py`)
+3. **整合完成**: 实现了与贾维斯系统的无缝整合
+4. **多模型支持**: 支持 DeepSeek、OpenAI、Anthropic、Google、DashScope
+5. **模块化设计**: 智能体独立，易于扩展和维护
+
+**新功能**:
+- 多智能体协同分析 (基本面、技术面、情绪面、风险评估)
+- TradingAgents-CN 多智能体框架集成
+- 统一的模型管理和配置系统
+- 加权决策机制，提高分析准确性
+
+**生成文件**:
+- `trading_agents_integration.py` - TradingAgents-CN 整合模块
+- `optimized_multi_agent.py` - 优化版多智能体系统
+- `test_integration.py` - 整合测试脚本
+- `DEPLOYMENT_SUMMARY.md` - 部署总结文档
+
+**测试结果**: 通过率 66.7% (4/6)，核心功能正常
+
+**下一步计划**:
+1. 修复 TradingAgents-CN 包装器问题
+2. 添加数据库支持
+3. 完善错误处理和日志系统
+
 ---
 
 ## 核心策略

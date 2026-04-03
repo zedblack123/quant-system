@@ -47,6 +47,38 @@ class NewsManager:
             'time': datetime.now()
         }
     
+    def _deduplicate_news(self, news_list):
+        """新闻去重 - 基于标题相似度"""
+        if not news_list:
+            return []
+        
+        seen_titles = set()
+        unique_news = []
+        
+        for news in news_list:
+            title = news.get('title', '').strip()
+            if not title:
+                continue
+            
+            # 标准化标题：去除空格、标点、转小写
+            normalized = self._normalize_title(title)
+            
+            if normalized not in seen_titles:
+                seen_titles.add(normalized)
+                unique_news.append(news)
+        
+        print(f"📊 去重完成: {len(news_list)} -> {len(unique_news)} 条")
+        return unique_news
+    
+    def _normalize_title(self, title):
+        """标准化标题用于比较"""
+        import re
+        # 去除空格和标点
+        t = re.sub(r'[\s\.,，。、！？\!\?\.\,\;；]', '', title)
+        # 转小写
+        t = t.lower()
+        return t
+    
     def get_all_news(self, date=None):
         """
         获取所有新闻
@@ -69,6 +101,9 @@ class NewsManager:
         
         # 按时间排序
         all_news.sort(key=lambda x: x.get('time', ''), reverse=True)
+        
+        # 去重
+        all_news = self._deduplicate_news(all_news)
         
         return all_news
     
