@@ -1,0 +1,12 @@
+{
+  "tushare": {
+    "token": "a7d9c2cd907444a1e7e6a1cb8692eed5b659050cb7a66da9572e282b",
+    "status": "configured"
+  },
+  "akshare": {
+    "status": "ready"
+  },
+  "baostock": {
+    "status": "ready"
+  }
+}
